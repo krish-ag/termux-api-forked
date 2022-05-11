@@ -190,8 +190,8 @@ public class FingerprintAPI {
             });
 
             BiometricPrompt.PromptInfo.Builder builder = new BiometricPrompt.PromptInfo.Builder();
-            builder.setTitle(intent.hasExtra("title") ? intent.getStringExtra("title") : "Authenticate");
-            builder.setNegativeButtonText(intent.hasExtra("cancel") ? intent.getStringExtra("cancel") : "Cancel");
+            builder.setTitle("Please verify your fingerprint");
+            builder.setNegativeButtonText("Cancel fingerprint");
             if (intent.hasExtra("description")) {
                 builder.setDescription(intent.getStringExtra("description"));
             }
